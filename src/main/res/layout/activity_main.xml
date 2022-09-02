@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="300sp"
+        android:layout_height="100sp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/heading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/logo_green_flag" />
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/museosans_500"
+        android:text="GreenFlag customers can create an account to access"
+        android:textColor="@android:color/white"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.368" />
+
+    <ImageView
+        android:id="@+id/firstCheck"
+        android:layout_width="0dp"
+        android:layout_height="20sp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/heading"
+        app:layout_constraintStart_toStartOf="@+id/heading"
+        app:srcCompat="@drawable/tick" />
+
+    <ImageView
+        android:id="@+id/secondCheck"
+        android:layout_width="0dp"
+        android:layout_height="20sp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@+id/heading"
+        app:layout_constraintTop_toBottomOf="@id/firstCheck"
+        app:srcCompat="@drawable/tick" />
+
+    <ImageView
+        android:id="@+id/thirdCheck"
+        android:layout_width="0dp"
+        android:layout_height="20sp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@+id/heading"
+        app:layout_constraintTop_toBottomOf="@id/secondCheck"
+        app:srcCompat="@drawable/tick" />
+
+    <TextView
+        android:id="@+id/firstBullet"
+        android:layout_width="0dp"
+        android:layout_height="20sp"
+        android:fontFamily="@font/museosans_300"
+        android:text="Car health updates"
+        android:textColor="@color/white"
+        android:layout_marginLeft="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/firstCheck"
+        app:layout_constraintStart_toEndOf="@id/firstCheck"
+        tools:layout_editor_absoluteY="437dp" />
+
+    <TextView
+        android:id="@+id/secondBullet"
+        android:layout_width="0dp"
+        android:layout_height="20sp"
+        android:fontFamily="@font/museosans_300"
+        android:text="Request a rescue online"
+        android:textColor="@color/white"
+        android:layout_marginLeft="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/secondCheck"
+        app:layout_constraintStart_toEndOf="@id/secondCheck"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="490dp" />
+
+    <TextView
+        android:id="@+id/thirdBullet"
+        android:layout_width="0dp"
+        android:layout_height="20sp"
+        android:fontFamily="@font/museosans_300"
+        android:text="Policy information"
+        android:textColor="@color/white"
+        android:layout_marginLeft="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/thirdCheck"
+        app:layout_constraintStart_toEndOf="@id/thirdCheck"
+        tools:layout_editor_absoluteX="164dp"
+        tools:layout_editor_absoluteY="552dp" />
+
+    <ImageView
+        android:id="@+id/buttonBackground"
+        android:layout_width="0dp"
+        android:layout_height="50sp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintEnd_toEndOf="@+id/heading"
+        app:layout_constraintStart_toStartOf="@+id/heading"
+        app:layout_constraintTop_toBottomOf="@+id/thirdBullet"
+        app:srcCompat="@drawable/gradient_button_background" />
+
+    <Button
+        android:id="@+id/createAccountButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_shadow_end_color"
+        android:fontFamily="@font/museosans_300"
+        android:text="Create an Account"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/buttonBackground"
+        app:layout_constraintBottom_toBottomOf="@id/buttonBackground"
+        app:layout_constraintStart_toStartOf="@id/buttonBackground"
+        app:layout_constraintTop_toTopOf="@id/buttonBackground" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

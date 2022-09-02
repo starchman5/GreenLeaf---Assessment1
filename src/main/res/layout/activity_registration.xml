@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Registration">
+
+    <TextView
+        android:id="@+id/registerHeader"
+        android:layout_width="250sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="20dp"
+        android:duplicateParentState="false"
+        android:fontFamily="@font/museosans_500"
+        android:singleLine="false"
+        android:text="Create an account"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10sp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/registerHeader" />
+
+    <TextView
+        android:id="@+id/emailHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="30sp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="30sp"
+        android:fontFamily="@font/museosans_300"
+        android:text="Email address"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/registerHeader"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <EditText
+        android:id="@+id/emailField"
+        android:layout_width="wrap_content"
+        android:layout_height="48sp"
+        android:background="@color/white"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/emailHeader"
+        app:layout_constraintTop_toBottomOf="@+id/emailHeader"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/passwordHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="30sp"
+        android:layout_marginTop="30sp"
+        android:fontFamily="@font/museosans_300"
+        android:text="Create Password"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="@+id/emailField"
+        app:layout_constraintTop_toBottomOf="@+id/emailField" />
+
+    <EditText
+        android:id="@+id/passwordField"
+        android:layout_width="wrap_content"
+        android:layout_height="48sp"
+        android:autoText="false"
+        android:background="@color/white"
+        android:ems="10"
+        android:fontFamily="@font/museosans_300"
+        android:hint="See criteria below"
+        android:inputType="textPassword"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/emailField"
+        app:layout_constraintStart_toStartOf="@+id/emailField"
+        app:layout_constraintTop_toBottomOf="@+id/passwordHeader" />
+
+    <TextView
+        android:id="@+id/repeatPassHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="30sp"
+        android:layout_marginTop="30sp"
+        android:fontFamily="@font/museosans_300"
+        android:text="Repeat Password"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/passwordField"
+        app:layout_constraintTop_toBottomOf="@+id/passwordField" />
+
+    <EditText
+        android:id="@+id/repeatPassField"
+        android:layout_width="wrap_content"
+        android:layout_height="48sp"
+        android:background="@color/white"
+        android:ems="10"
+        android:fontFamily="@font/museosans_300"
+        android:inputType="textPassword"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/passwordField"
+        app:layout_constraintTop_toBottomOf="@+id/repeatPassHeader"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/passwordCriteria"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:fontFamily="@font/museosans_300"
+        android:text="Your password should have a minimum of 8 characters and contain at least one number, one uppercase and one lowercase letter. You can use special characters."
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@id/repeatPassField"
+        app:layout_constraintStart_toStartOf="@+id/repeatPassField"
+        app:layout_constraintTop_toBottomOf="@+id/repeatPassField" />
+
+    <ImageView
+        android:id="@+id/nextButtonBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30sp"
+        android:layout_marginBottom="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/passwordCriteria"
+        app:layout_constraintStart_toStartOf="@+id/passwordCriteria"
+        app:layout_constraintTop_toBottomOf="@+id/passwordCriteria"
+        app:srcCompat="@drawable/gradient_button_background" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_shadow_end_color"
+        android:fontFamily="@font/museosans_300"
+        android:text="NEXT"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="@id/nextButtonBackground"
+        app:layout_constraintBottom_toBottomOf="@id/nextButtonBackground"
+        app:layout_constraintStart_toStartOf="@id/nextButtonBackground"
+        app:layout_constraintEnd_toEndOf="@id/nextButtonBackground"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="593dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
